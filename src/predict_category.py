@@ -9,6 +9,7 @@ model = joblib.load("model/category_prediction_model.pkl")
 print("Model loaded successfully!")
 print("Type 'q' at any point to stop.\n")
 
+# Petlja za unos naslova proizvoda i predikciju kategorije
 while True:
     title = input("Enter product title: ")
     if title.lower() == "q":
