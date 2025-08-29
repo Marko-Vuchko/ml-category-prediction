@@ -15,14 +15,14 @@ while True:
         print("Exiting...")
         break
  
-    # Create a DataFrame from input
+    # Kreiranje DataFrame-a za predikciju
     user_input = pd.DataFrame([{
         "review_title": title,
         "product_title": title,
         "number_of_views": 0 
     }])
     
-    # Make prediction
+    # Kreiranje predikcije i prikaz rezultata
     prediction = model.predict(user_input)
     clean_prediction = prediction[0].strip("[]'").title()
     print(f"\nPredicted category: {clean_prediction}\n" + "-" * 50)
